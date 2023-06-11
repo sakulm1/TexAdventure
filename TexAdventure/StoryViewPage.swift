@@ -27,7 +27,7 @@ struct StoryViewPage: View {
                     .background(.blue)
                     .foregroundColor(.white)
                     .opacity(1)
-                    .cornerRadius(10.0)
+                    .cornerRadius(10.1)
                 }
             }
            

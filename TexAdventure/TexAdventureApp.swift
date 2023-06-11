@@ -11,7 +11,8 @@ import SwiftUI
 struct TexAdventureApp: App {
     var body: some Scene {
         WindowGroup {
-            StoryView()
+            //StoryView()
+            HomeView()
         }
     }
 }

@@ -20,7 +20,7 @@
 /* Begin PBXFileReference section */
 		533A90D02A3615AF0018A446 /* StoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryView.swift; sourceTree = "<group>"; };
 		533A90D42A3622AB0018A446 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		534742732A3605B7001D891C /* TexAdventure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TexAdventure.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		534742732A3605B7001D891C /* TextAdventure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextAdventure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		534742762A3605B7001D891C /* TexAdventureApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TexAdventureApp.swift; sourceTree = "<group>"; };
 		5347427A2A3605B9001D891C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5347427D2A3605B9001D891C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -43,7 +43,7 @@
 		5347426A2A3605B7001D891C = {
 			isa = PBXGroup;
 			children = (
-				534742752A3605B7001D891C /* TexAdventure */,
+				534742752A3605B7001D891C /* TextAdventure */,
 				534742742A3605B7001D891C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,12 +51,12 @@
 		534742742A3605B7001D891C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				534742732A3605B7001D891C /* TexAdventure.app */,
+				534742732A3605B7001D891C /* TextAdventure.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		534742752A3605B7001D891C /* TexAdventure */ = {
+		534742752A3605B7001D891C /* TextAdventure */ = {
 			isa = PBXGroup;
 			children = (
 				534742862A360C41001D891C /* Data.swift */,
@@ -68,7 +68,7 @@
 				5347427A2A3605B9001D891C /* Assets.xcassets */,
 				5347427C2A3605B9001D891C /* Preview Content */,
 			);
-			path = TexAdventure;
+			path = TextAdventure;
 			sourceTree = "<group>";
 		};
 		5347427C2A3605B9001D891C /* Preview Content */ = {
@@ -82,9 +82,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		534742722A3605B7001D891C /* TexAdventure */ = {
+		534742722A3605B7001D891C /* TextAdventure */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 534742812A3605B9001D891C /* Build configuration list for PBXNativeTarget "TexAdventure" */;
+			buildConfigurationList = 534742812A3605B9001D891C /* Build configuration list for PBXNativeTarget "TextAdventure" */;
 			buildPhases = (
 				5347426F2A3605B7001D891C /* Sources */,
 				534742702A3605B7001D891C /* Frameworks */,
@@ -94,9 +94,9 @@
 			);
 			dependencies = (
 			);
-			name = TexAdventure;
+			name = TextAdventure;
 			productName = TexAdventure;
-			productReference = 534742732A3605B7001D891C /* TexAdventure.app */;
+			productReference = 534742732A3605B7001D891C /* TextAdventure.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -114,7 +114,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5347426E2A3605B7001D891C /* Build configuration list for PBXProject "TexAdventure" */;
+			buildConfigurationList = 5347426E2A3605B7001D891C /* Build configuration list for PBXProject "TextAdventure" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -127,7 +127,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				534742722A3605B7001D891C /* TexAdventure */,
+				534742722A3605B7001D891C /* TextAdventure */,
 			);
 		};
 /* End PBXProject section */
@@ -280,17 +280,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"TexAdventure/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"TextAdventure/Preview Content\"";
 				DEVELOPMENT_TEAM = M3PPT883FZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = LukasMaile;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.word-games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,9 +302,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.LukasMaile.TexAdventure;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -309,17 +316,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"TexAdventure/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"TextAdventure/Preview Content\"";
 				DEVELOPMENT_TEAM = M3PPT883FZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = LukasMaile;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.word-games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -327,16 +338,19 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.LukasMaile.TexAdventure;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5347426E2A3605B7001D891C /* Build configuration list for PBXProject "TexAdventure" */ = {
+		5347426E2A3605B7001D891C /* Build configuration list for PBXProject "TextAdventure" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5347427F2A3605B9001D891C /* Debug */,
@@ -345,7 +359,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		534742812A3605B9001D891C /* Build configuration list for PBXNativeTarget "TexAdventure" */ = {
+		534742812A3605B9001D891C /* Build configuration list for PBXNativeTarget "TextAdventure" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				534742822A3605B9001D891C /* Debug */,

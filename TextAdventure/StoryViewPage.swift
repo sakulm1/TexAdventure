@@ -13,6 +13,7 @@ struct StoryViewPage: View {
     let pageIndex: Int
     
     @State private var tab = false
+    @State private var time: Int = 5
     
     var body: some View {
         VStack{
@@ -21,12 +22,18 @@ struct StoryViewPage: View {
                 Text(story.pages[pageIndex].text)
                     .fontWeight(.bold)
             }
-            NavigationLink(destination: HomeView()){
-                Image(systemName: "xmark.circle")
-                    .font(.largeTitle)
-                    .padding()
-                    .foregroundColor(.red)
-            }
+            
+            HStack {
+                NavigationLink(destination: HomeView()){
+                    Image(systemName: "xmark.circle")
+                        .font(.largeTitle)
+                        .padding()
+                        .foregroundColor(.red)
+                }
+                Spacer()
+                Text(String(time) + " s")
+                    .font(.title)
+            }.padding()
                 
             ForEach(story.pages[pageIndex].choices, id: \choice.text){choice in
                 NavigationLink(destination: StoryViewPage(story: story, pageIndex: choice.destination)){
@@ -42,7 +49,6 @@ struct StoryViewPage: View {
            
         }
         .padding()
-        
     }
 }
 

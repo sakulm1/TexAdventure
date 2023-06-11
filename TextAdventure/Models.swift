@@ -16,10 +16,12 @@ struct choice{
 
 struct StoryPage{
     var text: String
+    var time: Int
     var choices: [choice]
     
-    init(text: String, choices: [choice]) {
+    init(text: String, time: Int, choices: [choice]) {
         self.text = text
+        self.time = time
         self.choices = choices
     }
 }

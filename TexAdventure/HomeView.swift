@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        NavigationView{
+        NavigationStack{
         VStack{
             Spacer()
             Text("Text Adventure Game")
@@ -30,7 +30,7 @@ struct HomeView: View {
                 }
                 Spacer()
             }
-        }
+        }.navigationBarBackButtonHidden(true)
     }
 }
 

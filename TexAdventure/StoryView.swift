@@ -9,9 +9,9 @@ import SwiftUI
 
 struct StoryView: View {
     var body: some View {
-        NavigationStack {
+        
             StoryViewPage(story: story, pageIndex: 0)
-        }
+        
     }
 }
 

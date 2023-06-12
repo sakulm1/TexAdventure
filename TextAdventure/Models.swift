@@ -33,3 +33,5 @@ struct Story{
         return pages[pageIndex]
     }
 }
+
+

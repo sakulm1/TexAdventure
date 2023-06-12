@@ -16,11 +16,10 @@ struct Hearts: View {
                 fullHeart()
                 fullHeart()
                 fullHeart()
-                
             }
             .scaleEffect(0.5)
-            .background(.white)
-            .frame(maxWidth: .infinity, alignment: .center)
+            .frame(maxWidth: 180, alignment: .center)
+//            .background(.yellow)
         }
     }
 }
@@ -38,7 +37,7 @@ struct Triangle: Shape {
     }
 }
 
-struct halfHearts: View {
+struct halfHeart: View {
     var turn: Bool
     var body: some View {
         ZStack{
@@ -59,12 +58,11 @@ struct halfHearts: View {
 struct fullHeart: View{
     var body: some View{
         ZStack{
-            halfHearts(turn: false)
+            halfHeart(turn: false)
                 .offset(x: 29.5)
-            halfHearts(turn: true)
+            halfHeart(turn: true)
         }.padding()
             
-        
     }
 }
 
@@ -76,6 +74,12 @@ struct Hearts_Previews: PreviewProvider {
 
 struct halfHearts_Previews: PreviewProvider {
     static var previews: some View {
-        halfHearts(turn: true)
+        halfHeart(turn: true)
+    }
+}
+
+struct FullHearts_Previews: PreviewProvider {
+    static var previews: some View {
+        fullHeart()
     }
 }

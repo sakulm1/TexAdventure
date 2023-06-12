@@ -31,11 +31,11 @@ struct StoryPageView: View {
                         .padding()
                         .foregroundColor(.red)
                 }
-                VStack{
+                
                     Hearts()
-                        .scaleEffect(1)
-                        .background(.black)
-                }.scaleEffect(0.5)
+                        .scaleEffect(0.6)
+                        .offset(x: -20)
+//                        .background(.black)
                 
                 
                 Text(String(time) + " s")

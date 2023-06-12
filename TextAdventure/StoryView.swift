@@ -10,7 +10,7 @@ import SwiftUI
 struct StoryView: View {
     var body: some View {
         
-            StoryViewPage(story: story, pageIndex: 0)
+            StoryPageView(story: story, pageIndex: 0)
         
     }
 }

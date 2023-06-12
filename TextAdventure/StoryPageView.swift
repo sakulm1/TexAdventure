@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct StoryViewPage: View {
+struct StoryPageView: View {
     
     let story: Story
     let pageIndex: Int
@@ -24,19 +24,27 @@ struct StoryViewPage: View {
             }
             
             HStack {
+                Spacer()
                 NavigationLink(destination: HomeView()){
                     Image(systemName: "xmark.circle")
                         .font(.largeTitle)
                         .padding()
                         .foregroundColor(.red)
                 }
-                Spacer()
+                VStack{
+                    Hearts()
+                        .scaleEffect(1)
+                        .background(.black)
+                }.scaleEffect(0.5)
+                
+                
                 Text(String(time) + " s")
                     .font(.title)
+                Spacer()
             }.padding()
                 
             ForEach(story.pages[pageIndex].choices, id: \choice.text){choice in
-                NavigationLink(destination: StoryViewPage(story: story, pageIndex: choice.destination)){
+                NavigationLink(destination: StoryPageView(story: story, pageIndex: choice.destination)){
                     Text(choice.text)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding()
@@ -55,6 +63,6 @@ struct StoryViewPage: View {
 
 struct TextView_Previews: PreviewProvider {
     static var previews: some View {
-        StoryViewPage(story: story, pageIndex: 0)
+        StoryPageView(story: story, pageIndex: 0)
     }
 }

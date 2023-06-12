@@ -18,7 +18,7 @@ struct HomeView: View {
                 .fontWeight(.bold)
             
             Spacer()
-
+        
                 NavigationLink(destination: StoryView()) {
                     Text("Start the Game")
                         .controlSize(.large)

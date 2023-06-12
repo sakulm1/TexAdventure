@@ -20,12 +20,20 @@ struct HomeView: View {
             Spacer()
         
                 NavigationLink(destination: StoryView()) {
-                    Text("Start the Game")
+                    Text("New Game")
+                        .frame(width: 140)
                         .controlSize(.large)
                         .padding()
                         .background(Capsule().foregroundColor(.blue))
                         .foregroundColor(.white)
+                        
                 }
+            Text("Resume Game")
+                .frame(width: 140)
+                .controlSize(.large)
+                .padding()
+                .background(Capsule().foregroundColor(.blue))
+                .foregroundColor(.white)
                 Spacer()
             }
         }.navigationBarBackButtonHidden(true)

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct StoryView: View {
+    
     var body: some View {
         
             StoryPageView(story: story, pageIndex: 0)

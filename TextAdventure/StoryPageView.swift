@@ -11,7 +11,7 @@ struct StoryPageView: View {
     
     let story: Story
     let pageIndex: Int
-    
+    @State var life: Int = 8
     @State private var tab = false
     @State private var time: Int = 5
     
@@ -23,6 +23,15 @@ struct StoryPageView: View {
                     .fontWeight(.bold)
             }
             
+            //---------------Test-------------
+            Stepper("\(life)", value: $life, in: 0...10)
+                    .padding(.bottom)
+            
+            Button("life - 5"){
+                reduceLife(number: 5)
+            }
+            //--------------------------------
+            
             HStack {
                 Spacer()
                 NavigationLink(destination: HomeView()){
@@ -32,15 +41,15 @@ struct StoryPageView: View {
                         .foregroundColor(.red)
                 }
                 
-                    Hearts()
+                Hearts(life: life)
                         .scaleEffect(0.6)
                         .offset(x: -20)
-//                        .background(.black)
-                
                 
                 Text(String(time) + " s")
                     .font(.title)
+                
                 Spacer()
+                
             }.padding()
                 
             ForEach(story.pages[pageIndex].choices, id: \choice.text){choice in
@@ -58,6 +67,14 @@ struct StoryPageView: View {
         }
         .padding()
     }
+    func reduceLife(number: Int){
+        if (life - number <= 0){
+            life = 0
+        }else{
+            life = life - number
+        }
+    }
+    
 }
 
 

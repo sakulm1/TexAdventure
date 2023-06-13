@@ -32,17 +32,29 @@ struct Hearts: View {
             return AnyView(
                 HStack {
                     ForEach(0 ..< lifeCount) { value in
-                        fullHeart(half: false)
+                        if value <= 8 {
+                            fullHeart(extraLife: false, half: false)
+                        }else{
+                            fullHeart(extraLife: true, half: false)
+                        }
                     }
                 }
-            )
+                )
         }else{
             return AnyView(
                 HStack {
                     ForEach(0 ..< lifeCount) { value in
-                        fullHeart(half: false)
+                        if value < 8 {
+                            fullHeart(extraLife: false, half: false)
+                        }else{
+                            fullHeart(extraLife: true, half: false)
+                        }
                     }
-                    fullHeart(half: true)
+                    if life < 8 {
+                        fullHeart(extraLife: false, half: true)
+                    }else{
+                        fullHeart(extraLife: true, half: true)
+                    }
                 }
             )
         }
@@ -75,18 +87,19 @@ struct Hearts: View {
                     .offset(x: -16, y: -11.4)
                     .foregroundColor(color)
                     .padding(.trailing, -200)
-            }.scaleEffect(x: turn ? -1: 1, y: 1) // Horizontale Spiegelung
+            }.scaleEffect(x: turn ? -1 : 1, y: 1) // Horizontale Spiegelung
             
         }
     }
     
     struct fullHeart: View{
+        var extraLife: Bool
         var half: Bool
         var body: some View{
             ZStack{
                 halfHeart(turn: false, color: half ? .white : .red)
                     .offset(x: 29.5)
-                halfHeart(turn: true, color: .red)
+                halfHeart(turn: true, color: extraLife ? .yellow: .red)
             }.padding()
             
         }
@@ -106,7 +119,7 @@ struct Hearts: View {
     
     struct FullHearts_Previews: PreviewProvider {
         static var previews: some View {
-            fullHeart(half: false)
+            fullHeart(extraLife: false, half: false)
         }
     }
 }

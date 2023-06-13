@@ -18,6 +18,7 @@
 		534742872A360C41001D891C /* StoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534742862A360C41001D891C /* StoryData.swift */; };
 		534742892A360DB9001D891C /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534742882A360DB9001D891C /* Models.swift */; };
 		534C1CA82A37024B009708B4 /* Hearts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534C1CA72A37024B009708B4 /* Hearts.swift */; };
+		5373EF0B2A39094900142592 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5373EF0A2A39094900142592 /* Character.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		534742862A360C41001D891C /* StoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryData.swift; sourceTree = "<group>"; };
 		534742882A360DB9001D891C /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		534C1CA72A37024B009708B4 /* Hearts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hearts.swift; sourceTree = "<group>"; };
+		5373EF0A2A39094900142592 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 			children = (
 				53407C8A2A38597D0027E045 /* Data */,
 				534742762A3605B7001D891C /* TexAdventureApp.swift */,
+				5373EF0A2A39094900142592 /* Character.swift */,
 				534742842A3606AE001D891C /* StoryPageView.swift */,
 				534742882A360DB9001D891C /* Models.swift */,
 				533A90D02A3615AF0018A446 /* StoryView.swift */,
@@ -168,6 +171,7 @@
 			files = (
 				533A90D12A3615AF0018A446 /* StoryView.swift in Sources */,
 				534742852A3606AE001D891C /* StoryPageView.swift in Sources */,
+				5373EF0B2A39094900142592 /* Character.swift in Sources */,
 				534742772A3605B7001D891C /* TexAdventureApp.swift in Sources */,
 				533A90D52A3622AB0018A446 /* HomeView.swift in Sources */,
 				534C1CA82A37024B009708B4 /* Hearts.swift in Sources */,

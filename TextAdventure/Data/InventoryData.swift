@@ -19,6 +19,6 @@ InventorySlot(item: gold, id: 3)
 ]
 )
 
-let schwert = Item(name: "Schwert", id: 1, durability: 20, count: 1)
-let brot = Item(name: "Brot", id: 2, durability: 100, count: 15)
-let gold = Item(name: "Gold", id: 3, durability: 100, count: 4)
+let schwert = InvItem(name: "Schwert", id: 1, durability: 20, count: 1)
+let brot = InvItem(name: "Brot", id: 2, durability: 100, count: 15)
+let gold = InvItem(name: "Gold", id: 3, durability: 100, count: 4)

@@ -11,7 +11,7 @@ struct StoryPageView: View {
     
     let story: Story
     let pageIndex: Int
-    @State var life: Int = 8
+    @State var life: Int
     @State private var tab = false
     @State private var time: Int = 5
     
@@ -53,7 +53,7 @@ struct StoryPageView: View {
             }.padding()
                 
             ForEach(story.pages[pageIndex].choices, id: \choice.text){choice in
-                NavigationLink(destination: StoryPageView(story: story, pageIndex: choice.destination)){
+                NavigationLink(destination: StoryPageView(story: story, pageIndex: choice.destination, life: life)){
                     Text(choice.text)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding()
@@ -80,6 +80,6 @@ struct StoryPageView: View {
 
 struct TextView_Previews: PreviewProvider {
     static var previews: some View {
-        StoryPageView(story: story, pageIndex: 0)
+        StoryPageView(story: story, pageIndex: 0, life: 8)
     }
 }

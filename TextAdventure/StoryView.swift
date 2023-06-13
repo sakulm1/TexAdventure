@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct StoryView: View {
-    
+    @State var life: Int = 8
     var body: some View {
         
-            StoryPageView(story: story, pageIndex: 0)
+        StoryPageView(story: story, pageIndex: 0, life: life)
         
     }
 }

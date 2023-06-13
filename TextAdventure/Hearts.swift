@@ -28,11 +28,11 @@ struct Hearts: View {
                 }.scaleEffect(5)
                 
             )
-        } else if life % 2 == 0 {
+        }else if life % 2 == 0 {
             return AnyView(
                 HStack {
                     ForEach(0 ..< lifeCount) { value in
-                        if value <= 8 {
+                        if value < 4 {
                             fullHeart(extraLife: false, half: false)
                         }else{
                             fullHeart(extraLife: true, half: false)
@@ -44,7 +44,7 @@ struct Hearts: View {
             return AnyView(
                 HStack {
                     ForEach(0 ..< lifeCount) { value in
-                        if value < 8 {
+                        if value < 4 {
                             fullHeart(extraLife: false, half: false)
                         }else{
                             fullHeart(extraLife: true, half: false)
@@ -97,9 +97,9 @@ struct Hearts: View {
         var half: Bool
         var body: some View{
             ZStack{
-                halfHeart(turn: false, color: half ? .white : .red)
+                halfHeart(turn: false, color: half ? .white : extraLife ? .yellow : .red) //zweite hälfte
                     .offset(x: 29.5)
-                halfHeart(turn: true, color: extraLife ? .yellow: .red)
+                halfHeart(turn: true, color: extraLife ? .yellow : .red) //erste hälfte
             }.padding()
             
         }
@@ -107,7 +107,7 @@ struct Hearts: View {
     
     struct Hearts_Previews: PreviewProvider {
         static var previews: some View {
-            Hearts(life: 10)
+            Hearts(life: 11)
         }
     }
     

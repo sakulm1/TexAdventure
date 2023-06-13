@@ -7,6 +7,13 @@
 
 import Foundation
 
+//>##############################>
+//||                            ||
+//||           Story            ||
+//||                            ||
+//>##############################>
+
+
 
 struct choice{
     var text: String
@@ -33,5 +40,36 @@ struct Story{
         return pages[pageIndex]
     }
 }
+
+
+//>##############################>
+//||                            ||
+//||         Inventory          ||
+//||                            ||
+//>##############################>
+
+
+struct InventoryModel {
+    var slots: [InventorySlot]
+//
+//    subscript(_ inventoryIndex: Int) -> InventorySlot{
+//        return slots[inventoryIndex]
+//    }
+}
+
+struct InventorySlot{
+    var item: Item
+    var id: Int
+}
+
+struct Item{
+    var name: String
+    var id: Int
+    var durability: Int
+    var count: Int
+}
+
+
+
 
 

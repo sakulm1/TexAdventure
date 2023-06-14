@@ -17,6 +17,7 @@ struct StoryPageView: View {
     
     var body: some View {
         VStack{
+            
             Spacer()
             ScrollView{
                 Text(story.pages[pageIndex].text)
@@ -24,12 +25,12 @@ struct StoryPageView: View {
             }
             
             //---------------Test-------------
-            Stepper("\(life)", value: $life, in: 0...16)
-                    .padding(.bottom)
-            
-            Button("life - 5"){
-                reduceLife(number: 5)
-            }
+//            Stepper("\(life)", value: $life, in: 0...16)
+//                    .padding(.bottom)
+//
+//            Button("life - 5"){
+//                reduceLife(number: 5)
+//            }
             //--------------------------------
             
             HStack {
@@ -65,7 +66,22 @@ struct StoryPageView: View {
             }
            
         }
+        .toolbar{
+            ToolbarItem(placement: .navigationBarTrailing){
+                NavigationLink(destination: InventoryView(inventory: inventar)) {
+                    Image(systemName: "backpack")
+                        .scaleEffect(1.2)
+                        .foregroundColor(Color.yellow)
+                }
+            }
+            ToolbarItem(placement: .navigationBarLeading){
+                Image(systemName: "map")
+                    .scaleEffect(1.2)
+                    .foregroundColor(Color.green)
+            }
+        }
         .padding()
+
     }
     func reduceLife(number: Int){
         if (life - number <= 0){

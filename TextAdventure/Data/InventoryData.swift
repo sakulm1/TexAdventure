@@ -10,7 +10,7 @@ import SwiftUI
 
 
 //sample data
-let Inventar = InventoryModel(slots: [
+let inventar = InventoryModel(slots: [
 
 InventorySlot(item: schwert, id: 1),
 InventorySlot(item: brot, id: 2),

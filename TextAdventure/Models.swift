@@ -106,6 +106,9 @@ enum FoodType{
     case apfel(Apfel)
 }
 
+//GEGENSTÄNDE
+
+
 
 
 

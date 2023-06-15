@@ -13,7 +13,7 @@ import SwiftUI
 let inventar = InventoryModel(slots: [
 
     InventorySlot(item: ItemType.Schwert(Schwert(addedName: " der Vernichtung", strength: 2, durability: 10)), quantity: 1)
-
+    //Inventar Items
 
 ])
 

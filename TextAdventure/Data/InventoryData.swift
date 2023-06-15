@@ -12,13 +12,12 @@ import SwiftUI
 //sample data
 let inventar = InventoryModel(slots: [
 
-InventorySlot(item: schwert, id: 1),
-InventorySlot(item: brot, id: 2),
-InventorySlot(item: gold, id: 3)
+    InventorySlot(item: ItemType.Schwert(Schwert(addedName: " der Vernichtung", strength: 2, durability: 10)), quantity: 1)
 
-]
-)
 
-let schwert = InvItem(name: "Schwert", id: 1, durability: 20, count: 1)
-let brot = InvItem(name: "Brot", id: 2, durability: 100, count: 15)
-let gold = InvItem(name: "Gold", id: 3, durability: 100, count: 4)
+])
+
+
+
+
+

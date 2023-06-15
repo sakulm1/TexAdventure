@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 //>##############################>
 //||                            ||
@@ -51,55 +52,77 @@ struct Story{
 
 struct InventoryModel {
     var slots: [InventorySlot]
-//
-//    subscript(_ inventoryIndex: Int) -> InventorySlot{
-//        return slots[inventoryIndex]
-//    }
+    
+    subscript(_ inventoryIndex: Int) -> InventorySlot? {
+        guard inventoryIndex >= 0 && inventoryIndex < slots.count else {
+            return nil
+        }
+        return slots[inventoryIndex]
+    }
 }
 
-struct InventorySlot{
-    var item: InvItem
-    var id: Int
+struct InventorySlot {
+    var item: ItemType
+    var quantity: Int
 }
 
-struct InvItem{
+struct Effect {
     var name: String
-    var id: Int
+    // Weitere Eigenschaften
+}
+
+struct Enchantment{
+    var name: String
+    //weitere Verzauberungen
+}
+
+enum ItemType {
+    case Schwert(Schwert)
+    case fisch(Fisch)
+    case apfel(Apfel)
+    case gold(Gold)
+    case holz(Holz)
+}
+
+//Waffen
+struct Schwert{
+    var name = "Schwert"
+    var addedName: String //z.b ... der Verdammnis
+    //var enchantments: [Enchantment]
+    var strength: Int   //ungefährer Wert der dem Gegner bei einem Angriff weggenommen wird
     var durability: Int
-    var count: Int
+    var image: Image = Image(systemName: "scissors")
 }
 
-struct Weapon{
-    var name: String
-    var durability: Int
-    var enchantments: [String] //add enchantments
+//Essen
+struct Fisch{
+    var name = "Fisch"
+    var addLife = 3
+    var Effect: Effect
+    var image: Image = Image(systemName: "fish")
+
 }
 
-struct Food{
-    var name: String
-    var addHalth: Int
-    var reduceHalth: Int
-    var effect: String //add Effects
+struct Apfel{
+    var name = "Apfel"
+    var addLife = 1
+    var Effect: Effect
+    var image: Image = Image(systemName: "apple.logo")
 }
 
-struct Items{
-    var name: String
-    var worth: Int
-    var tradabel: Bool
+//Gegenstände
+
+struct Gold{
+    var name = "Gold"
+    var Value: Int
+    var image: Image = Image(systemName: "dollarsign")
 }
 
-struct Effect{
-    var name: String
-//    var time: Int
-//    var reduceLife: Int
-//    var addLife: Int
-//    var makeStronger: Int
-//    var mekeWeaker: Int
-//    var luck: Bool
+struct Holz{
+    var name = "Holz"
+    var value: Int
+    var image: Image = Image(systemName: "tree")
 }
-
-
-
 
 
 

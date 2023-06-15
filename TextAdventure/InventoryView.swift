@@ -26,11 +26,12 @@ struct InventoryView_Previews: PreviewProvider {
 func getItems(inventory: InventoryModel) -> some View{
     return AnyView(
         VStack {
-            List{
-                ForEach(0..<inventory.slots.count) {index in
-                        Text(inventory.slots[index].item.name + String(inventory.slots[index].item.count));
-                }
-            }
+            Text("Inventar")
+//            List{
+//                ForEach(0..<inventory.slots.count) {index in
+//                        Text(inventory.slots[index].item.name + String(inventory.slots[index].item.count));
+//                }
+//            }
         }
     )
 }

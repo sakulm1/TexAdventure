@@ -25,8 +25,8 @@ struct StoryPageView: View {
             }
             
             //---------------Test-------------
-//            Stepper("\(life)", value: $life, in: 0...16)
-//                    .padding(.bottom)
+            Stepper("\(life)", value: $life, in: 0...16)
+                    .padding(.bottom)
 //
 //            Button("life - 5"){
 //                reduceLife(number: 5)

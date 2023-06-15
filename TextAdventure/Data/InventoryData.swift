@@ -12,7 +12,7 @@ import SwiftUI
 //sample data
 let inventar = InventoryModel(slots: [
 
-    InventorySlot(item: ItemType.Schwert(Schwert(addedName: " der Vernichtung", strength: 2, durability: 10)), quantity: 1)
+    InventorySlot(item: ItemType.schwert(Schwert(addedName: " der Vernichtung", strength: 2, durability: 10)), quantity: 1)
     //Inventar Items
 
 ])

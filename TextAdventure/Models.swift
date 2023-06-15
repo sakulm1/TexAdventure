@@ -77,16 +77,59 @@ struct Enchantment{
 }
 
 enum ItemType {
-    case Schwert(Schwert)
+    case schwert(Schwert)
     case fisch(Fisch)
     case apfel(Apfel)
     case gold(Gold)
     case holz(Holz)
 }
+//WAFFEN
+struct Weapon{
+    var type: WeaponType
+    var enchantments: Enchantment
+}
+
+enum WeaponType{
+    case schwert(Schwert)
+    case axt(Axt)
+    case stock(Stock)
+}
+
+//ESSEN
+
+struct Food{
+    var FoodType: FoodType
+}
+
+enum FoodType{
+    case fisch(Fisch)
+    case apfel(Apfel)
+}
+
+
+
 
 //Waffen
 struct Schwert{
     var name = "Schwert"
+    var addedName: String //z.b ... der Verdammnis
+    //var enchantments: [Enchantment]
+    var strength: Int   //ungefährer Wert der dem Gegner bei einem Angriff weggenommen wird
+    var durability: Int
+    var image: Image = Image(systemName: "scissors")
+}
+
+struct Axt{
+    var name = "Axt"
+    var addedName: String //z.b ... der Verdammnis
+    //var enchantments: [Enchantment]
+    var strength: Int   //ungefährer Wert der dem Gegner bei einem Angriff weggenommen wird
+    var durability: Int
+    var image: Image = Image(systemName: "scissors")
+}
+
+struct Stock{
+    var name = "Stock"
     var addedName: String //z.b ... der Verdammnis
     //var enchantments: [Enchantment]
     var strength: Int   //ungefährer Wert der dem Gegner bei einem Angriff weggenommen wird

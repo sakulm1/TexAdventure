@@ -31,6 +31,7 @@ func getItems(inventory: InventoryModel) -> some View {
                         Text(String(slot.quantity))
                     case .generalItem(let generalItem):
                         InventoryCard_GeneralItem(name: generalItem.name, value: generalItem.value, image: generalItem.image)
+                        Text(String(slot.quantity))
                     case .food(let food):
                         InventoryCard_Food(name: food.name, value: food.value, addLive: food.addLife)
                         Text(String(slot.quantity))
@@ -97,9 +98,6 @@ struct InventoryCard_Food: View{
             Text("Value: " + String(value))
                 .font(.headline)
                 .offset(x: 30, y: 20)
-            Text("4")
-                .font(.largeTitle)
-                .offset(x:325 , y: 60)
         }
     }
 }
@@ -113,7 +111,7 @@ struct InventoryCard_GeneralItem: View{
     var body: some View{
         ZStack(alignment: .leading){
             RoundedRectangle(cornerRadius: 25)
-                .fill(.gray)
+                .fill(.green)
                 .frame(width: .infinity, height: 200)
                 .opacity(0.3)
                 .shadow(radius: 10)

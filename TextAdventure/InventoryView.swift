@@ -10,12 +10,14 @@ import SwiftUI
 struct InventoryView: View {
     let inventory: InventoryModel
     var body: some View {
-        VStack{
-            ScrollView{
-                getItems(inventory: inventory)
-            }
+        NavigationStack{
+            VStack{
+                ScrollView{
+                    getItems(inventory: inventory)
+                }
             }
         }
+    }
     }
 
 
@@ -27,9 +29,9 @@ func getItems(inventory: InventoryModel) -> some View {
                     case .weapon(let weapon):
                         InventoryCard_Weapon(name: weapon.name, damage: weapon.damage, durability: weapon.haltbarkeit, value: weapon.value)
                     case .generalItem(let generalItem):
-                        Text(generalItem.name)
+                        InventoryCard_GeneralItem(name: generalItem.name, value: generalItem.value, image: generalItem.image)
                     case .food(let food):
-                        Text(food.name)
+                        InventoryCard_Food(name: food.name, value: food.value, addLive: food.addLife)
                     }
                 }
         }
@@ -47,7 +49,7 @@ struct InventoryCard_Weapon: View{
        return AnyView(
         ZStack(alignment: .leading){
             RoundedRectangle(cornerRadius: 25)
-                .fill(.gray)
+                .fill(.purple)
                 .frame(width: .infinity, height: 200)
                 .opacity(0.3)
                 .shadow(radius: 10)
@@ -77,7 +79,7 @@ struct InventoryCard_Food: View{
     var body: some View{
         ZStack(alignment: .leading){
             RoundedRectangle(cornerRadius: 25)
-                .fill(.gray)
+                .fill(.brown)
                 .frame(width: .infinity, height: 200)
                 .opacity(0.3)
                 .shadow(radius: 10)
@@ -95,9 +97,39 @@ struct InventoryCard_Food: View{
     }
 }
 
+
+struct InventoryCard_GeneralItem: View{
+    var name: String
+    var value: Int
+    var image: Image?
+    
+    var body: some View{
+        ZStack(alignment: .leading){
+            RoundedRectangle(cornerRadius: 25)
+                .fill(.gray)
+                .frame(width: .infinity, height: 200)
+                .opacity(0.3)
+                .shadow(radius: 10)
+                .padding()
+            Text(name)
+                .offset(x: 30 , y: -60)
+                .font(.largeTitle)
+            Text("Value: " + String(value))
+                .font(.headline)
+                .offset(x: 30, y: -20)
+        }
+    }
+}
+
 struct InventoryView_Previews: PreviewProvider {
     static var previews: some View {
         InventoryView(inventory: inventar)
+    }
+}
+
+struct InventoryCard_GeneralItem_Previews: PreviewProvider{
+    static var previews: some View{
+        InventoryCard_GeneralItem(name: "Stein", value: 1, image: nil)
     }
 }
 

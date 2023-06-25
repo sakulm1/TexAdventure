@@ -9,7 +9,7 @@ import SwiftUI
 
 struct StoryView: View {
 
-    @State var HauptCharakter = MainCharacter(life: 8, name: "Test", effect: Effect(name:"TestEffect"), strenght: 1)
+    @State var HauptCharakter = MainCharacter(life: 8, name: "Test", strenght: 1)
     //@State var life: Int = 8
     var body: some View {
         

@@ -51,9 +51,9 @@ struct Story{
 
 
 struct InventoryModel {
-    var slots: [InventorySlot]
+    var slots: [Slot]
     
-    subscript(_ inventoryIndex: Int) -> InventorySlot? {
+    subscript(_ inventoryIndex: Int) -> Slot? {
         guard inventoryIndex >= 0 && inventoryIndex < slots.count else {
             return nil
         }
@@ -61,116 +61,72 @@ struct InventoryModel {
     }
 }
 
-struct InventorySlot {
+struct Slot{
     var item: ItemType
     var quantity: Int
 }
 
-struct Effect {
-    var name: String
-    // Weitere Eigenschaften
-}
-
-struct Enchantment{
-    var name: String
-    //weitere Verzauberungen
-}
-
 enum ItemType {
-    case schwert(Schwert)
-    case fisch(Fisch)
-    case apfel(Apfel)
-    case gold(Gold)
-    case holz(Holz)
-}
-//WAFFEN
-struct Weapon{
-    var type: WeaponType
-    var enchantments: Enchantment
+    case weapon(Weapon)
+    case generalItem(GeneralItem)
+    case food(Food)
+    case enchatmentItem(EntchantmentItem)
+    case keyItem(KeyItem)
 }
 
-enum WeaponType{
-    case schwert(Schwert)
-    case axt(Axt)
-    case stock(Stock)
-}
-
-//ESSEN
-
-struct Food{
-    var FoodType: FoodType
-}
-
-enum FoodType{
-    case fisch(Fisch)
-    case apfel(Apfel)
-}
-
-//GEGENSTÄNDE
-
-
-
-
-
-//Waffen
-struct Schwert{
-    var name = "Schwert"
-    var addedName: String //z.b ... der Verdammnis
-    //var enchantments: [Enchantment]
-    var strength: Int   //ungefährer Wert der dem Gegner bei einem Angriff weggenommen wird
-    var durability: Int
-    var image: Image = Image(systemName: "scissors")
-}
-
-struct Axt{
-    var name = "Axt"
-    var addedName: String //z.b ... der Verdammnis
-    //var enchantments: [Enchantment]
-    var strength: Int   //ungefährer Wert der dem Gegner bei einem Angriff weggenommen wird
-    var durability: Int
-    var image: Image = Image(systemName: "scissors")
-}
-
-struct Stock{
-    var name = "Stock"
-    var addedName: String //z.b ... der Verdammnis
-    //var enchantments: [Enchantment]
-    var strength: Int   //ungefährer Wert der dem Gegner bei einem Angriff weggenommen wird
-    var durability: Int
-    var image: Image = Image(systemName: "scissors")
-}
-
-//Essen
-struct Fisch{
-    var name = "Fisch"
-    var addLife = 3
-    var Effect: Effect
-    var image: Image = Image(systemName: "fish")
-
-}
-
-struct Apfel{
-    var name = "Apfel"
-    var addLife = 1
-    var Effect: Effect
-    var image: Image = Image(systemName: "apple.logo")
-}
-
-//Gegenstände
-
-struct Gold{
-    var name = "Gold"
-    var Value: Int
-    var image: Image = Image(systemName: "dollarsign")
-}
-
-struct Holz{
-    var name = "Holz"
+struct Weapon {
+    var name: String
+   // var image: Image
     var value: Int
-    var image: Image = Image(systemName: "tree")
+    var damage: Int
+    var haltbarkeit: Int
+//    var entchantments: [Entchantments]
+    
+}
+
+struct GeneralItem {
+    var name: String
+    var image: Image
+    var value: Int
+//    var effect: Effect
+    
+}
+
+struct Food {
+    var name: String
+    var image: Image
+    var value: Int
+//    var effect: Effect
+    
+}
+
+struct EntchantmentItem {
+    var name: String
+    var image: Image
+    var value: Int
+    var itemCategory: [ItemType]
+    var count: Int
+    
 }
 
 
+struct KeyItem {
+    var name: String
+    var image: Image
+    var value: Int
+    
+   
+}
+
+
+
+//struct Effect{
+//
+//}
+//
+//struct Enchantment{
+//
+//}
 
 
 

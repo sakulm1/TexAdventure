@@ -8,14 +8,18 @@
 import Foundation
 import SwiftUI
 
+let schwert1 = Weapon(name: "Schwert1", value: 46, damage: 1, haltbarkeit: 6)
 
 //sample data
 let inventar = InventoryModel(slots: [
 
-    InventorySlot(item: ItemType.schwert(Schwert(addedName: " der Vernichtung", strength: 2, durability: 10)), quantity: 1)
-    //Inventar Items
+    Slot(item: ItemType.weapon(schwert1) , quantity: 1)
 
 ])
+
+
+
+
 
 
 

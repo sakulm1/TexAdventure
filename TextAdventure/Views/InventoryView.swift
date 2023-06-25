@@ -28,13 +28,13 @@ func getItems(inventory: InventoryModel) -> some View {
                     switch slot.item {
                     case .weapon(let weapon):
                         InventoryCard_Weapon(name: weapon.name, damage: weapon.damage, durability: weapon.haltbarkeit, value: weapon.value)
-                        Text(String(slot.quantity))
+//                        Text(String(slot.quantity))
                     case .generalItem(let generalItem):
                         InventoryCard_GeneralItem(name: generalItem.name, value: generalItem.value, image: generalItem.image)
-                        Text(String(slot.quantity))
+//                        Text(String(slot.quantity))
                     case .food(let food):
                         InventoryCard_Food(name: food.name, value: food.value, addLive: food.addLife)
-                        Text(String(slot.quantity))
+//                        Text(String(slot.quantity))
                     }
                 }
         }

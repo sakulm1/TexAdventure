@@ -63,6 +63,7 @@ struct InventoryModel {
 
 struct Slot{
     var item: ItemType
+    var id: UUID?
     var quantity: Int
 }
 
@@ -70,63 +71,29 @@ enum ItemType {
     case weapon(Weapon)
     case generalItem(GeneralItem)
     case food(Food)
-    case enchatmentItem(EntchantmentItem)
-    case keyItem(KeyItem)
 }
 
 struct Weapon {
     var name: String
-   // var image: Image
+    //var image: Image
     var value: Int
     var damage: Int
     var haltbarkeit: Int
-//    var entchantments: [Entchantments]
-    
 }
 
 struct GeneralItem {
     var name: String
-    var image: Image
+    var image: Image?
     var value: Int
-//    var effect: Effect
-    
 }
 
 struct Food {
     var name: String
-    var image: Image
+    var image: Image?
     var value: Int
-//    var effect: Effect
-    
+    var addLife: Int
 }
 
-struct EntchantmentItem {
-    var name: String
-    var image: Image
-    var value: Int
-    var itemCategory: [ItemType]
-    var count: Int
-    
-}
-
-
-struct KeyItem {
-    var name: String
-    var image: Image
-    var value: Int
-    
-   
-}
-
-
-
-//struct Effect{
-//
-//}
-//
-//struct Enchantment{
-//
-//}
 
 
 

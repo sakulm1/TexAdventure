@@ -8,12 +8,14 @@
 import Foundation
 import SwiftUI
 
-let schwert1 = Weapon(name: "Schwert1", value: 46, damage: 1, haltbarkeit: 6)
+let schwert1 = Weapon(name: "Schwert", value: 46, damage: 1, haltbarkeit: 6)
+let food1 = Food(name: "Brot", image: nil, value: 5, addLife: 5)
 
 //sample data
 let inventar = InventoryModel(slots: [
 
-    Slot(item: ItemType.weapon(schwert1) , quantity: 1)
+    Slot(item: ItemType.weapon(schwert1), id: UUID() , quantity: 1),
+    Slot(item: ItemType.food(food1), quantity: 3)
 
 ])
 

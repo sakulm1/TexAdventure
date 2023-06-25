@@ -28,10 +28,12 @@ func getItems(inventory: InventoryModel) -> some View {
                     switch slot.item {
                     case .weapon(let weapon):
                         InventoryCard_Weapon(name: weapon.name, damage: weapon.damage, durability: weapon.haltbarkeit, value: weapon.value)
+                        Text(String(slot.quantity))
                     case .generalItem(let generalItem):
                         InventoryCard_GeneralItem(name: generalItem.name, value: generalItem.value, image: generalItem.image)
                     case .food(let food):
                         InventoryCard_Food(name: food.name, value: food.value, addLive: food.addLife)
+                        Text(String(slot.quantity))
                     }
                 }
         }
@@ -53,7 +55,8 @@ struct InventoryCard_Weapon: View{
                 .frame(width: .infinity, height: 200)
                 .opacity(0.3)
                 .shadow(radius: 10)
-                .padding()
+                .padding(.trailing)
+                .padding(.leading)
             Text(name)
                 .offset(x: 30 , y: -60)
                 .font(.largeTitle)
@@ -83,7 +86,8 @@ struct InventoryCard_Food: View{
                 .frame(width: .infinity, height: 200)
                 .opacity(0.3)
                 .shadow(radius: 10)
-                .padding()
+                .padding(.trailing)
+                .padding(.leading)
             Text(name)
                 .offset(x: 30 , y: -60)
                 .font(.largeTitle)
@@ -93,6 +97,9 @@ struct InventoryCard_Food: View{
             Text("Value: " + String(value))
                 .font(.headline)
                 .offset(x: 30, y: 20)
+            Text("4")
+                .font(.largeTitle)
+                .offset(x:325 , y: 60)
         }
     }
 }
@@ -110,7 +117,8 @@ struct InventoryCard_GeneralItem: View{
                 .frame(width: .infinity, height: 200)
                 .opacity(0.3)
                 .shadow(radius: 10)
-                .padding()
+                .padding(.trailing)
+                .padding(.leading)
             Text(name)
                 .offset(x: 30 , y: -60)
                 .font(.largeTitle)

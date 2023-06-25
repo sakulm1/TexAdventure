@@ -84,9 +84,9 @@
 				533A90D02A3615AF0018A446 /* StoryView.swift */,
 				533A90D42A3622AB0018A446 /* HomeView.swift */,
 				534C1CA72A37024B009708B4 /* Hearts.swift */,
+				53407C882A3858210027E045 /* InventoryView.swift */,
 				5347427A2A3605B9001D891C /* Assets.xcassets */,
 				5347427C2A3605B9001D891C /* Preview Content */,
-				53407C882A3858210027E045 /* InventoryView.swift */,
 			);
 			path = TextAdventure;
 			sourceTree = "<group>";

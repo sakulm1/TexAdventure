@@ -48,6 +48,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		53271EF02A488CF40015CA6C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				534742842A3606AE001D891C /* StoryPageView.swift */,
+				533A90D42A3622AB0018A446 /* HomeView.swift */,
+				53407C882A3858210027E045 /* InventoryView.swift */,
+				533A90D02A3615AF0018A446 /* StoryView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		53407C8A2A38597D0027E045 /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -76,15 +87,12 @@
 		534742752A3605B7001D891C /* TextAdventure */ = {
 			isa = PBXGroup;
 			children = (
+				53271EF02A488CF40015CA6C /* Views */,
 				53407C8A2A38597D0027E045 /* Data */,
 				534742762A3605B7001D891C /* TexAdventureApp.swift */,
 				5373EF0A2A39094900142592 /* Character.swift */,
-				534742842A3606AE001D891C /* StoryPageView.swift */,
 				534742882A360DB9001D891C /* Models.swift */,
-				533A90D02A3615AF0018A446 /* StoryView.swift */,
-				533A90D42A3622AB0018A446 /* HomeView.swift */,
 				534C1CA72A37024B009708B4 /* Hearts.swift */,
-				53407C882A3858210027E045 /* InventoryView.swift */,
 				5347427A2A3605B9001D891C /* Assets.xcassets */,
 				5347427C2A3605B9001D891C /* Preview Content */,
 			);

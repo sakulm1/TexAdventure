@@ -8,11 +8,11 @@
 import Foundation
 import SwiftUI
 
-let schwert1 = Weapon(name: "Schwert", value: 46, damage: 100, haltbarkeit: 6)
-let food1 = Food(name: "Brot", image: nil, value: 5, addLife: 5)
-let stein1 = GeneralItem(name: "Stein", image: nil, value: 1)
-let stock = GeneralItem(name: "Stock", value: 4)
-let karotte = Food(name: "Karotte", value: 2, addLife: 34)
+let schwert1 = Weapon(name: "Schwert", image: "swordTest", value: 46, damage: 100, haltbarkeit: 6)
+let food1 = Food(name: "Brot", image: "swordTest", value: 5, addLife: 5)
+let stein1 = GeneralItem(name: "Stein", image: "swordTest", value: 1)
+let stock = GeneralItem(name: "Stock", image: "swordTest", value: 4)
+let karotte = Food(name: "Karotte", image: "swordTest", value: 2, addLife: 34)
 
 //sample data
 let inventar = InventoryModel(slots: [

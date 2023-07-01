@@ -27,14 +27,11 @@ func getItems(inventory: InventoryModel) -> some View {
             ForEach(inventory.slots, id: \.id){ slot in
                     switch slot.item {
                     case .weapon(let weapon):
-                        InventoryCard_Weapon(name: weapon.name, damage: weapon.damage, durability: weapon.haltbarkeit, value: weapon.value)
-//                        Text(String(slot.quantity))
+                        InventoryCard_Weapon(name: weapon.name, damage: weapon.damage, durability: weapon.haltbarkeit, value: weapon.value, image: weapon.image, quantity: slot.quantity)
                     case .generalItem(let generalItem):
-                        InventoryCard_GeneralItem(name: generalItem.name, value: generalItem.value, image: generalItem.image)
-//                        Text(String(slot.quantity))
+                        InventoryCard_GeneralItem(name: generalItem.name, value: generalItem.value, image: generalItem.image, quantity: slot.quantity)
                     case .food(let food):
-                        InventoryCard_Food(name: food.name, value: food.value, addLive: food.addLife)
-//                        Text(String(slot.quantity))
+                        InventoryCard_Food(name: food.name, value: food.value, addLive: food.addLife, quantity: slot.quantity)
                     }
                 }
         }
@@ -47,7 +44,8 @@ struct InventoryCard_Weapon: View{
     var damage: Int
     var durability: Int
     var value: Int
-    var image: Image?
+    var image: String
+    var quantity: Int?
     var body: some View{
        return AnyView(
         ZStack(alignment: .leading){
@@ -70,6 +68,15 @@ struct InventoryCard_Weapon: View{
             Text("Value: " + String(value))
                 .font(.headline)
                 .offset(x:30, y: 60)
+            Text(String(quantity ?? 0))
+                .font(.title)
+                .offset(x: 335, y: 70)
+            Image(image ?? "swordTest")
+                .resizable()
+                .cornerRadius(10.0)
+                .frame(width: 110, height: 110, alignment: .center)
+                .offset(x: 200)
+                
         }
        )
     }
@@ -79,7 +86,8 @@ struct InventoryCard_Food: View{
     var name: String
     var value: Int
     var addLive: Int
-    var image: Image?
+    var image: String?
+    var quantity: Int?
     var body: some View{
         ZStack(alignment: .leading){
             RoundedRectangle(cornerRadius: 25)
@@ -98,6 +106,14 @@ struct InventoryCard_Food: View{
             Text("Value: " + String(value))
                 .font(.headline)
                 .offset(x: 30, y: 20)
+            Text(String(quantity ?? 0))
+                .font(.title)
+                .offset(x: 335, y: 70)
+            Image(image ?? "swordTest")
+                .resizable()
+                .cornerRadius(10.0)
+                .frame(width: 110, height: 110, alignment: .center)
+                .offset(x: 200)
         }
     }
 }
@@ -106,7 +122,8 @@ struct InventoryCard_Food: View{
 struct InventoryCard_GeneralItem: View{
     var name: String
     var value: Int
-    var image: Image?
+    var image: String?
+    var quantity: Int?
     
     var body: some View{
         ZStack(alignment: .leading){
@@ -123,6 +140,14 @@ struct InventoryCard_GeneralItem: View{
             Text("Value: " + String(value))
                 .font(.headline)
                 .offset(x: 30, y: -20)
+            Text(String(quantity ?? 0))
+                .font(.title)
+                .offset(x: 335, y: 70)
+            Image("swordTest")
+                .resizable()
+                .cornerRadius(10.0)
+                .frame(width: 110, height: 110, alignment: .center)
+                .offset(x: 200)
         }
     }
 }
@@ -135,18 +160,18 @@ struct InventoryView_Previews: PreviewProvider {
 
 struct InventoryCard_GeneralItem_Previews: PreviewProvider{
     static var previews: some View{
-        InventoryCard_GeneralItem(name: "Stein", value: 1, image: nil)
+        InventoryCard_GeneralItem(name: "Stein", value: 1, image: "swordTest")
     }
 }
 
 struct InventoryCard_Weapon_Previews: PreviewProvider{
     static var previews: some View{
-        InventoryCard_Weapon(name: "Schwert", damage: 5, durability: 100, value: 30, image: nil)
+        InventoryCard_Weapon(name: "Schwert", damage: 5, durability: 100, value: 30, image: "swordTest")
     }
 }
 
 struct InventoryCard_Food_Preview: PreviewProvider{
     static var previews: some View{
-        InventoryCard_Food(name: "Brot", value: 3, addLive: 2, image: nil)
+        InventoryCard_Food(name: "Brot", value: 3, addLive: 2, image: "swordTest")
     }
 }

@@ -73,9 +73,9 @@ enum ItemType {
     case food(Food)
 }
 
-struct Weapon {
+struct Weapon{
     var name: String
-    //var image: Image
+    var image: String
     var value: Int
     var damage: Int
     var haltbarkeit: Int
@@ -83,13 +83,13 @@ struct Weapon {
 
 struct GeneralItem {
     var name: String
-    var image: Image?
+    var image: String
     var value: Int
 }
 
 struct Food {
     var name: String
-    var image: Image?
+    var image: String
     var value: Int
     var addLife: Int
 }

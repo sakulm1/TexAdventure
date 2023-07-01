@@ -1,32 +1,24 @@
-//
-//  Models.swift
-//  TexAdventure
-//
-//  Created by Lukas Maile on 11.06.23.
-//
-
-import Foundation
-import SwiftUI
-
 //>##############################>
 //||                            ||
 //||           Story            ||
 //||                            ||
 //>##############################>
 
+import Foundation
 
-
+/// Die `choice` Struktur repräsentiert eine Entscheidung, die ein Spieler in der Geschichte treffen kann.
 struct choice{
-    var text: String
-    var destination: Int
+    var text: String  // Der Text der Entscheidung.
+    var destination: Int  // Die Seitennummer, zu der die Geschichte geht, wenn diese Entscheidung ausgewählt wird.
 }
 
-
+/// Die `StoryPage` Struktur repräsentiert eine Seite der Geschichte.
 struct StoryPage{
-    var text: String
-    var time: Int
-    var choices: [choice]
+    var text: String  // Der Text der Geschichte auf dieser Seite.
+    var time: Int  // Die für diese Seite benötigte Zeit. (Ohne zusätzlichen Kontext ist nicht klar, was dies darstellt)
+    var choices: [choice]  // Die Entscheidungen, die der Spieler auf dieser Seite treffen kann.
     
+    // Initialisiert eine neue StoryPage mit dem gegebenen Text, der Zeit und den Entscheidungen.
     init(text: String, time: Int, choices: [choice]) {
         self.text = text
         self.time = time
@@ -34,14 +26,15 @@ struct StoryPage{
     }
 }
 
+/// Die `Story` Struktur repräsentiert die gesamte Geschichte, die aus mehreren StoryPages besteht.
 struct Story{
-    var pages: [StoryPage]
+    var pages: [StoryPage]  // Die Seiten der Geschichte.
     
+    // Gibt die Seite an dem gegebenen Index zurück.
     subscript (_ pageIndex: Int) -> StoryPage{
         return pages[pageIndex]
     }
 }
-
 
 //>##############################>
 //||                            ||
@@ -49,10 +42,11 @@ struct Story{
 //||                            ||
 //>##############################>
 
-
+/// Die `InventoryModel` Struktur repräsentiert das Inventar eines Spielers.
 struct InventoryModel {
-    var slots: [Slot]
+    var slots: [Slot]  // Die Slots des Inventars.
     
+    // Gibt den Slot an dem gegebenen Index zurück, oder nil wenn der Index außerhalb des Bereichs liegt.
     subscript(_ inventoryIndex: Int) -> Slot? {
         guard inventoryIndex >= 0 && inventoryIndex < slots.count else {
             return nil
@@ -61,41 +55,49 @@ struct InventoryModel {
     }
 }
 
+/// Die `Slot` Struktur repräsentiert einen Slot im Inventar des Spielers.
 struct Slot{
-    var item: ItemType
-    var id: UUID?
-    var quantity: Int
+    var item: ItemType  // Der Gegenstand in diesem Slot.
+    var id: UUID?  // Die eindeutige Kennung für diesen Slot.
+    var quantity: Int  // Die Menge des Gegenstandes in diesem Slot.
 }
 
+/// Die `ItemType` Aufzählung repräsentiert die Arten von Gegenständen, die in einem Slot im Inventar sein können.
 enum ItemType {
     case weapon(Weapon)
     case generalItem(GeneralItem)
     case food(Food)
 }
 
+/// Die `Weapon` Struktur repräsentiert einen Waffengegenstand.
 struct Weapon{
+    var name: String  // Der Name der Waffe.
+    var image: String  // Das Bild der Waffe.
+    var value: Int  // Der Wert der Waffe.
+    var damage: Int  // Der Schaden, den die Waffe zufügen kann.
+    var haltbarkeit: Int  // Die Haltbarkeit der Waffe.
+}
+
+/// Die `GeneralItem` Struktur repräsentiert einen allgemeinen Gegenstand.
+struct GeneralItem {
+    var name: String  // Der Name des Gegenstandes.
+    var image: String  // Das Bild des Gegenstandes.
+    var value: Int  // Der Wert des Gegenstandes.
+}
+
+/// Die `Food` Struktur repräsentiert einen Lebensmittelgegenstand.
+struct Food {
+    var name: String  // Der Name des Lebensmittels.
+    var image: String  // Das Bild des Lebensmittels.
+    var value: Int  // Der Wert des Lebensmittels.
+    var addLife: Int  // Die Menge an Leben, die das Essen dieses Lebensmittels hinzufügt.
+}
+
+/// Die `Armour` Struktur repräsentiert einen Lebensmittelgegenstand.
+struct Armour {
     var name: String
+    var bodypart: String
     var image: String
     var value: Int
-    var damage: Int
     var haltbarkeit: Int
 }
-
-struct GeneralItem {
-    var name: String
-    var image: String
-    var value: Int
-}
-
-struct Food {
-    var name: String
-    var image: String
-    var value: Int
-    var addLife: Int
-}
-
-
-
-
-
-

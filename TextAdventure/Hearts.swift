@@ -88,7 +88,6 @@ struct Hearts: View {
                     .foregroundColor(color)
                     .padding(.trailing, -200)
             }.scaleEffect(x: turn ? -1 : 1, y: 1) // Horizontale Spiegelung
-            
         }
     }
     
@@ -97,9 +96,11 @@ struct Hearts: View {
         var half: Bool
         var body: some View{
             ZStack{
-                halfHeart(turn: false, color: half ? .white : extraLife ? .yellow : .red) //zweite hälfte
+//                halfHeart(turn: false, color: half ? .white : extraLife ? .yellow : .red)
+                halfHeart(turn: false, color: half ? .white : extraLife ? .red : .red)
                     .offset(x: 29.5)
-                halfHeart(turn: true, color: extraLife ? .yellow : .red) //erste hälfte
+//                halfHeart(turn: true, color: extraLife ? .yellow : .red)
+                halfHeart(turn: true, color: extraLife ? .red : .red)
             }.padding()
             
         }

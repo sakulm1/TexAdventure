@@ -112,7 +112,6 @@ struct InventoryCard_Food: View{
                 .resizable()
                 .frame(width: 100, height: 100, alignment: .center)
                 .offset(x: 200, y: 20)
-                
         }
     }
 }

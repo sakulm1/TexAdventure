@@ -39,12 +39,11 @@ let chicken = Food(name: "Chicken", image: "chicken", value: 18, addLife: 9)
 let avocado = Food(name: "Avocado", image: "avocado", value: 12, addLife: 6)
 let potionOfLuck = Food(name: "Potion of Luck", image: "postion_luck", value: 30, addLife: 15)
 
+let foodItems = [apfel, egg, steak, potato, beet, bacon, cheese, pretzel, chicken, avocado, potionOfLuck]
+
 
 
 //generalItems
-
-
-
 //
 //let inventar = InventoryModel(slots: [
 //    Slot(item: ItemType.weapon(dolch), id: UUID() , quantity: 1),
@@ -68,7 +67,6 @@ let inventar = InventoryModel(slots: [
     Slot(item: ItemType.food(chicken), id: UUID(), quantity: 1),
     Slot(item: ItemType.food(avocado), id: UUID(), quantity: 1),
     Slot(item: ItemType.food(potionOfLuck), id: UUID(), quantity: 1)
-
 ])
 
 

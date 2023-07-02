@@ -113,7 +113,7 @@ struct Enemy{
     var life: Int
     var attackProbability: Int
     var defenseProbability: Int
-    var damage: Int //TO-DO
+    var damage: Int
 }
 
 

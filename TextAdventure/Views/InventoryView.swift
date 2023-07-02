@@ -31,7 +31,7 @@ func getItems(inventory: InventoryModel) -> some View {
                     case .generalItem(let generalItem):
                         InventoryCard_GeneralItem(name: generalItem.name, value: generalItem.value, image: generalItem.image, quantity: slot.quantity)
                     case .food(let food):
-                        InventoryCard_Food(name: food.name, value: food.value, addLive: food.addLife, quantity: slot.quantity)
+                        InventoryCard_Food(name: food.name, value: food.value, addLive: food.addLife,image: food.image, quantity: slot.quantity)
                     }
                 }
         }
@@ -73,9 +73,8 @@ struct InventoryCard_Weapon: View{
                 .offset(x: 335, y: 70)
             Image(image)
                 .resizable()
-                .cornerRadius(10.0)
-                .frame(width: 110, height: 110, alignment: .center)
-                .offset(x: 200)
+                .frame(width: 100, height: 100, alignment: .center)
+                .offset(x: 200, y: 20)
                 
         }
        )
@@ -86,7 +85,7 @@ struct InventoryCard_Food: View{
     var name: String
     var value: Int
     var addLive: Int
-    var image: String?
+    var image: String
     var quantity: Int?
     var body: some View{
         ZStack(alignment: .leading){
@@ -109,13 +108,10 @@ struct InventoryCard_Food: View{
             Text(String(quantity ?? 0))
                 .font(.title)
                 .offset(x: 335, y: 70)
-            Image(image ?? "Apple")
+            Image(image)
                 .resizable()
-                .scaleEffect(2.0)
-//                .cornerRadius(10.0)
-                .frame(width: 64, height: 64, alignment: .center)
-                .offset(x: 200)
-
+                .frame(width: 100, height: 100, alignment: .center)
+                .offset(x: 200, y: 20)
                 
         }
     }
@@ -125,7 +121,7 @@ struct InventoryCard_Food: View{
 struct InventoryCard_GeneralItem: View{
     var name: String
     var value: Int
-    var image: String?
+    var image: String
     var quantity: Int?
     
     var body: some View{
@@ -146,7 +142,7 @@ struct InventoryCard_GeneralItem: View{
             Text(String(quantity ?? 0))
                 .font(.title)
                 .offset(x: 335, y: 70)
-            Image("swordTest")
+            Image(image)
                 .resizable()
                 .cornerRadius(10.0)
                 .frame(width: 110, height: 110, alignment: .center)

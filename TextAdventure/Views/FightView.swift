@@ -8,18 +8,20 @@
 import SwiftUI
 
 struct FightView: View {
+    var image_Character: String = "wizard"
+    var image_ememy: String = "enemy_spider"
     var body: some View {
         VStack(alignment: .center){
             Spacer()
             ZStack{
-                Image("enemy_spider")
+                Image(image_ememy)
                     .scaleEffect(1.5)
                 Hearts(life: 10)
                     .offset(y: 100)
             }
             Spacer()
             ZStack{
-                Image("wizard")
+                Image(image_Character)
                     .scaleEffect(1.5)
                 Hearts(life: 10)
                     .offset(y: 120)

@@ -71,7 +71,7 @@ struct InventoryCard_Weapon: View{
             Text(String(quantity ?? 0))
                 .font(.title)
                 .offset(x: 335, y: 70)
-            Image(image ?? "swordTest")
+            Image(image)
                 .resizable()
                 .cornerRadius(10.0)
                 .frame(width: 110, height: 110, alignment: .center)
@@ -109,11 +109,14 @@ struct InventoryCard_Food: View{
             Text(String(quantity ?? 0))
                 .font(.title)
                 .offset(x: 335, y: 70)
-            Image(image ?? "swordTest")
+            Image(image ?? "Apple")
                 .resizable()
-                .cornerRadius(10.0)
-                .frame(width: 110, height: 110, alignment: .center)
+                .scaleEffect(2.0)
+//                .cornerRadius(10.0)
+                .frame(width: 64, height: 64, alignment: .center)
                 .offset(x: 200)
+
+                
         }
     }
 }

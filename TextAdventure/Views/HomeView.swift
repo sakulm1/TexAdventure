@@ -19,8 +19,8 @@ struct HomeView: View {
             
             Spacer()
         
-                NavigationLink(destination: StoryView()) {
-                    Text("New Game")
+            NavigationLink(destination: StoryView()) {
+                Text("New Game")
                         .frame(width: 140)
                         .controlSize(.large)
                         .padding()

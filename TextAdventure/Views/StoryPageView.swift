@@ -17,20 +17,25 @@ struct StoryPageView: View {
     
     var body: some View {
         VStack{
-            
             Spacer()
             ScrollView{
-                Text(story.pages[pageIndex].text)
-                    .fontWeight(.bold)
+                switch story.pages[pageIndex]{
+                case .storyPage(let page):
+                    Text(page.text)
+                        .fontWeight(.bold)
+                case .fightPage(_):
+                    Text("error")
+                }
+                
             }
             
             //---------------Test-------------
             Stepper("\(life)", value: $life, in: 0...16)
-                    .padding(.bottom)
-//
-//            Button("life - 5"){
-//                reduceLife(number: 5)
-//            }
+                .padding(.bottom)
+            //
+            //            Button("life - 5"){
+            //                reduceLife(number: 5)
+            //            }
             //--------------------------------
             
             HStack {
@@ -43,8 +48,8 @@ struct StoryPageView: View {
                 }
                 
                 Hearts(life: life)
-                        .scaleEffect(0.6)
-                        .offset(x: -20)
+                    .scaleEffect(0.6)
+                    .offset(x: -20)
                 
                 Text(String(time) + " s")
                     .font(.title)
@@ -52,19 +57,24 @@ struct StoryPageView: View {
                 Spacer()
                 
             }.padding()
-                
-            ForEach(story.pages[pageIndex].choices, id: \choice.text){choice in
-                NavigationLink(destination: StoryPageView(story: story, pageIndex: choice.destination, life: life)){
-                    Text(choice.text)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding()
-                    .background(.blue)
-                    .foregroundColor(.white)
-                    .opacity(1)
-                    .cornerRadius(10.1)
-                }.navigationBarBackButtonHidden(true)
-            }
-           
+            switch story.pages[pageIndex]{
+            case .storyPage(let page):
+                ForEach(page.choices, id: \Choice.text){choice in
+                    NavigationLink(destination: StoryPageView(story: story, pageIndex: choice.destination, life: life)){
+                        Text(choice.text)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding()
+                            .background(.blue)
+                            .foregroundColor(.white)
+                            .opacity(1)
+                            .cornerRadius(10.1)
+                    }.navigationBarBackButtonHidden(true)
+                }
+            case .fightPage(_):
+                Text("foo")
+            
+        }
+
         }
         .toolbar{
             ToolbarItem(placement: .navigationBarTrailing){

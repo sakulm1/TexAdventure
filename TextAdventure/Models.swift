@@ -7,7 +7,7 @@
 import Foundation
 
 /// Die `choice` Struktur repräsentiert eine Entscheidung, die ein Spieler in der Geschichte treffen kann.
-struct choice{
+struct Choice{
     var text: String  // Der Text der Entscheidung.
     var destination: Int  // Die Seitennummer, zu der die Geschichte geht, wenn diese Entscheidung ausgewählt wird.
 }
@@ -16,22 +16,33 @@ struct choice{
 struct StoryPage{
     var text: String  // Der Text der Geschichte auf dieser Seite.
     var time: Int  // Die für diese Seite benötigte Zeit. (Ohne zusätzlichen Kontext ist nicht klar, was dies darstellt)
-    var choices: [choice]  // Die Entscheidungen, die der Spieler auf dieser Seite treffen kann.
+    var choices: [Choice]  // Die Entscheidungen, die der Spieler auf dieser Seite treffen kann.
     
     // Initialisiert eine neue StoryPage mit dem gegebenen Text, der Zeit und den Entscheidungen.
-    init(text: String, time: Int, choices: [choice]) {
+    init(text: String, time: Int, choices: [Choice]) {
         self.text = text
         self.time = time
         self.choices = choices
     }
 }
 
+enum StoryPageCategory{
+    case storyPage(StoryPage)
+    case fightPage(FightPage)
+}
+
+struct FightPage{
+    var monster: Enemy
+    var nextPageIfWon: Int
+    var nextPageIfLost: Int
+}
+
 /// Die `Story` Struktur repräsentiert die gesamte Geschichte, die aus mehreren StoryPages besteht.
 struct Story{
-    var pages: [StoryPage]  // Die Seiten der Geschichte.
+    var pages: [StoryPageCategory]  // Die Seiten der Geschichte.
     
     // Gibt die Seite an dem gegebenen Index zurück.
-    subscript (_ pageIndex: Int) -> StoryPage{
+    subscript (_ pageIndex: Int) -> StoryPageCategory{
         return pages[pageIndex]
     }
 }

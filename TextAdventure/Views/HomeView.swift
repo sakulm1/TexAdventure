@@ -16,6 +16,7 @@ struct HomeView: View {
                 .padding()
                 .font(.largeTitle)
                 .fontWeight(.bold)
+            Text("hallo test")
             
             Spacer()
         

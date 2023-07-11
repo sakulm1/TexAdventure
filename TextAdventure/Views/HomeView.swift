@@ -26,8 +26,8 @@ struct HomeView: View {
                         .padding()
                         .background(Capsule().foregroundColor(.blue))
                         .foregroundColor(.white)
-                        
                 }
+            
             Text("Resume Game")
                 .frame(width: 140)
                 .controlSize(.large)

@@ -60,7 +60,7 @@ struct StoryPageView: View {
             switch story.pages[pageIndex]{
             case .storyPage(let page):
                 ForEach(page.choices, id: \Choice.text){choice in
-                    NavigationLink(destination: StoryPageView(story: story, pageIndex: choice.destination, life: life)){
+                    NavigationLink(destination: GameView(story: story, pageIndex: choice.destination, life: life)){
                         Text(choice.text)
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .padding()

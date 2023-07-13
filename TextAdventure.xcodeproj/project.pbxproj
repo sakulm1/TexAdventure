@@ -21,6 +21,7 @@
 		5350D5372A518FA60014C638 /* FightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5350D5362A518FA60014C638 /* FightView.swift */; };
 		5373EF0B2A39094900142592 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5373EF0A2A39094900142592 /* Character.swift */; };
 		53BF91BE2A60593A0092CB84 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BF91BD2A60593A0092CB84 /* GameView.swift */; };
+		53EC090D2A6063EB00B30655 /* FightSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EC090C2A6063EB00B30655 /* FightSystem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		5350D5362A518FA60014C638 /* FightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightView.swift; sourceTree = "<group>"; };
 		5373EF0A2A39094900142592 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		53BF91BD2A60593A0092CB84 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		53EC090C2A6063EB00B30655 /* FightSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightSystem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,11 +95,10 @@
 		534742752A3605B7001D891C /* TextAdventure */ = {
 			isa = PBXGroup;
 			children = (
+				534742762A3605B7001D891C /* TexAdventureApp.swift */,
 				53271EF02A488CF40015CA6C /* Views */,
 				53407C8A2A38597D0027E045 /* Data */,
-				534742762A3605B7001D891C /* TexAdventureApp.swift */,
-				5373EF0A2A39094900142592 /* Character.swift */,
-				534742882A360DB9001D891C /* Models.swift */,
+				53EC09092A60639C00B30655 /* Models */,
 				534C1CA72A37024B009708B4 /* Hearts.swift */,
 				5347427A2A3605B9001D891C /* Assets.xcassets */,
 				5347427C2A3605B9001D891C /* Preview Content */,
@@ -111,6 +112,16 @@
 				5347427D2A3605B9001D891C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		53EC09092A60639C00B30655 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				534742882A360DB9001D891C /* Models.swift */,
+				5373EF0A2A39094900142592 /* Character.swift */,
+				53EC090C2A6063EB00B30655 /* FightSystem.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +203,7 @@
 				534C1CA82A37024B009708B4 /* Hearts.swift in Sources */,
 				53407C8C2A38598C0027E045 /* InventoryData.swift in Sources */,
 				534742872A360C41001D891C /* StoryData.swift in Sources */,
+				53EC090D2A6063EB00B30655 /* FightSystem.swift in Sources */,
 				534742892A360DB9001D891C /* Models.swift in Sources */,
 				53BF91BE2A60593A0092CB84 /* GameView.swift in Sources */,
 				53407C892A3858210027E045 /* InventoryView.swift in Sources */,

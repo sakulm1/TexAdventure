@@ -113,18 +113,4 @@ struct Armour {
     var haltbarkeit: Int
 }
 
-//>##############################>
-//||                            ||
-//||         Enemys             ||
-//||                            ||
-//>##############################>
-
-struct Enemy{
-    var name: String
-    var life: Int
-    var attackProbability: Int
-    var defenseProbability: Int
-    var damage: Int
-}
-
 

@@ -20,6 +20,7 @@
 		534C1CA82A37024B009708B4 /* Hearts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534C1CA72A37024B009708B4 /* Hearts.swift */; };
 		5350D5372A518FA60014C638 /* FightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5350D5362A518FA60014C638 /* FightView.swift */; };
 		5373EF0B2A39094900142592 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5373EF0A2A39094900142592 /* Character.swift */; };
+		537F19EB2A61768200CD6C29 /* SelectInventoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537F19EA2A61768200CD6C29 /* SelectInventoryView.swift */; };
 		53BF91BE2A60593A0092CB84 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BF91BD2A60593A0092CB84 /* GameView.swift */; };
 		53EC090D2A6063EB00B30655 /* FightSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EC090C2A6063EB00B30655 /* FightSystem.swift */; };
 /* End PBXBuildFile section */
@@ -39,6 +40,7 @@
 		534C1CA72A37024B009708B4 /* Hearts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hearts.swift; sourceTree = "<group>"; };
 		5350D5362A518FA60014C638 /* FightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightView.swift; sourceTree = "<group>"; };
 		5373EF0A2A39094900142592 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		537F19EA2A61768200CD6C29 /* SelectInventoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectInventoryView.swift; sourceTree = "<group>"; };
 		53BF91BD2A60593A0092CB84 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		53EC090C2A6063EB00B30655 /* FightSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightSystem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,6 +65,7 @@
 				533A90D02A3615AF0018A446 /* StoryView.swift */,
 				5350D5362A518FA60014C638 /* FightView.swift */,
 				53BF91BD2A60593A0092CB84 /* GameView.swift */,
+				537F19EA2A61768200CD6C29 /* SelectInventoryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				534742772A3605B7001D891C /* TexAdventureApp.swift in Sources */,
 				533A90D52A3622AB0018A446 /* HomeView.swift in Sources */,
 				534C1CA82A37024B009708B4 /* Hearts.swift in Sources */,
+				537F19EB2A61768200CD6C29 /* SelectInventoryView.swift in Sources */,
 				53407C8C2A38598C0027E045 /* InventoryData.swift in Sources */,
 				534742872A360C41001D891C /* StoryData.swift in Sources */,
 				53EC090D2A6063EB00B30655 /* FightSystem.swift in Sources */,
@@ -334,7 +338,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"TextAdventure/Preview Content\"";
 				DEVELOPMENT_TEAM = M3PPT883FZ;
 				ENABLE_PREVIEWS = YES;
@@ -370,7 +374,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"TextAdventure/Preview Content\"";
 				DEVELOPMENT_TEAM = M3PPT883FZ;
 				ENABLE_PREVIEWS = YES;

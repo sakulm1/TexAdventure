@@ -59,7 +59,7 @@ struct FightView: View {
                         .foregroundColor(.white)
                 }
             }
-        }.navigationBarBackButtonHidden(true)
+        }//.navigationBarBackButtonHidden(true)
     }
 }
 

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct StoryPageView: View {
     
     let story: Story

@@ -18,7 +18,7 @@ struct GameView: View {
         case .storyPage(_):
             StoryPageView(story: story, pageIndex: pageIndex, life: life)
         case .fightPage(let fightpage):
-            FightView(afterWin: fightpage.nextPageIfWon, life: life)
+            FightView(monster: fightpage.monster, afterWin: fightpage.nextPageIfWon, life: life)
         }
     }
 }

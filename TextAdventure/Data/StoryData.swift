@@ -7,8 +7,6 @@
 
 import Foundation
 import SwiftUI
-let Spinne: Enemy = Enemy(name: "Spinne", life: 6, attackProbability: 1, defenseProbability: 1, damage: 4)
-
 
 let story = Story(pages: [
     //0
@@ -80,8 +78,8 @@ let story = Story(pages: [
 
 func getRandomEnemy() -> Enemy{
     
-    let monster: [Enemy] = [enemyGoblin, enemySpider, enemyKnight, enemyWorm]
+    let monster: [Enemy] = [goblin, knight, mummy, redDragon, spider, wizard, worm, yellowDragon]
     
-    return monster.randomElement() ?? enemyGoblin
+    return monster.randomElement() ?? goblin
 }
 

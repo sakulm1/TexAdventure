@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "goblin.png",
+      "filename" : "enemy_goblin.png",
       "idiom" : "universal",
       "scale" : "1x"
     },

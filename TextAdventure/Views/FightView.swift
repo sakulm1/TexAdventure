@@ -10,13 +10,14 @@ import SwiftUI
 struct FightView: View {
     var image_Character: String = "wizard"
     var image_ememy: String = "enemy_spider"
+    var monster: Enemy
     var afterWin: Int
     @State var life: Int
     var body: some View {
         VStack(alignment: .center){
             Spacer()
             ZStack{
-                Image(image_ememy)
+                Image(monster.image)
                     .scaleEffect(1.5)
                 Hearts(life: 10)
                     .offset(y: 100)
@@ -65,6 +66,6 @@ struct FightView: View {
 
 struct FightView_Previews: PreviewProvider {
     static var previews: some View {
-        FightView(afterWin: 4, life: 1)
+        FightView(monster: getRandomEnemy(), afterWin: 4, life: 1)
     }
 }

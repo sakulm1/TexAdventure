@@ -9,6 +9,9 @@ import SwiftUI
 
 struct InventoryView: View {
     let inventory: InventoryModel
+    
+    @State var isDragging = false
+    
     var body: some View {
         NavigationStack{
             VStack{
@@ -20,7 +23,6 @@ struct InventoryView: View {
                         .frame(width: 100, height: 100)
                         .foregroundColor(.gray)
                         .shadow(radius: 10)
-                        .dropDestination()
                     RoundedRectangle(cornerRadius: 25)
                         .frame(width: 100, height: 100)
                         .foregroundColor(.gray)

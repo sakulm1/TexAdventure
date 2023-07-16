@@ -72,9 +72,16 @@ let story = Story(pages: [
             ]
             )),
     //5
-    StoryPageCategory.fightPage(FightPage(monster: Spinne, nextPageIfWon: 3, nextPageIfLost: 4))
+    StoryPageCategory.fightPage(FightPage(monster: getRandomEnemy(), nextPageIfWon: 3, nextPageIfLost: 4))
     
     
 ])
 
+
+func getRandomEnemy() -> Enemy{
+    
+    let monster: [Enemy] = [enemyGoblin, enemySpider, enemyKnight, enemyWorm]
+    
+    return monster.randomElement() ?? enemyGoblin
+}
 

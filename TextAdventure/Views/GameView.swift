@@ -20,7 +20,6 @@ struct GameView: View {
         case .fightPage(let fightpage):
             FightView(afterWin: fightpage.nextPageIfWon, life: life)
         }
-        
     }
 }
 

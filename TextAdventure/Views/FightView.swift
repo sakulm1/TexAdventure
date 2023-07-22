@@ -16,14 +16,13 @@ struct FightView: View {
     var body: some View {
         VStack(alignment: .center){
             Spacer()
-            ZStack{
+            VStack{
                 Image(monster.image)
-                    .scaleEffect(1.5)
-                Hearts(life: 10)
-                    .offset(y: 100)
+                    .scaleEffect(3)
+                HealthBar(life: 5)
             }
             Spacer()
-            ZStack{
+            VStack{
                 Image(image_Character)
                     .scaleEffect(1.5)
                 Hearts(life: life)

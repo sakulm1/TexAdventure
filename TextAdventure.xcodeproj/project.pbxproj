@@ -22,6 +22,7 @@
 		5373EF0B2A39094900142592 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5373EF0A2A39094900142592 /* Character.swift */; };
 		5385ACED2A64158500CACDC9 /* Enemys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5385ACEC2A64158500CACDC9 /* Enemys.swift */; };
 		53BF91BE2A60593A0092CB84 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BF91BD2A60593A0092CB84 /* GameView.swift */; };
+		53E276082A6BBC9100B5D850 /* HealthBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E276072A6BBC9100B5D850 /* HealthBar.swift */; };
 		53EC090D2A6063EB00B30655 /* FightSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EC090C2A6063EB00B30655 /* FightSystem.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		5373EF0A2A39094900142592 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		5385ACEC2A64158500CACDC9 /* Enemys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Enemys.swift; path = "../../../../../com~apple~Pages/Documents/Enemys.swift"; sourceTree = "<group>"; };
 		53BF91BD2A60593A0092CB84 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		53E276072A6BBC9100B5D850 /* HealthBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthBar.swift; sourceTree = "<group>"; };
 		53EC090C2A6063EB00B30655 /* FightSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightSystem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,10 +100,10 @@
 			isa = PBXGroup;
 			children = (
 				534742762A3605B7001D891C /* TexAdventureApp.swift */,
+				53E276092A6BBC9600B5D850 /* SubViews */,
 				53271EF02A488CF40015CA6C /* Views */,
 				53407C8A2A38597D0027E045 /* Data */,
 				53EC09092A60639C00B30655 /* Models */,
-				534C1CA72A37024B009708B4 /* Hearts.swift */,
 				5347427A2A3605B9001D891C /* Assets.xcassets */,
 				5347427C2A3605B9001D891C /* Preview Content */,
 			);
@@ -114,6 +116,15 @@
 				5347427D2A3605B9001D891C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		53E276092A6BBC9600B5D850 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				53E276072A6BBC9100B5D850 /* HealthBar.swift */,
+				534C1CA72A37024B009708B4 /* Hearts.swift */,
+			);
+			path = SubViews;
 			sourceTree = "<group>";
 		};
 		53EC09092A60639C00B30655 /* Models */ = {
@@ -198,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				533A90D12A3615AF0018A446 /* StoryView.swift in Sources */,
+				53E276082A6BBC9100B5D850 /* HealthBar.swift in Sources */,
 				534742852A3606AE001D891C /* StoryPageView.swift in Sources */,
 				5373EF0B2A39094900142592 /* Character.swift in Sources */,
 				5350D5372A518FA60014C638 /* FightView.swift in Sources */,

@@ -95,7 +95,7 @@ struct InventoryCard_Weapon: View{
                 .frame(width: 100, height: 100, alignment: .center)
                 .offset(x: 200, y: 20)
                 
-        }.draggable("ast")
+        }.draggable("")
        )
     }
 }

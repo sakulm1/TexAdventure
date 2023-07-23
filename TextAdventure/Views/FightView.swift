@@ -9,7 +9,6 @@ import SwiftUI
 
 struct FightView: View {
     var image_Character: String = "wizard"
-    var image_ememy: String = "enemy_spider"
     var monster: Enemy
     var afterWin: Int
     @State var life: Int

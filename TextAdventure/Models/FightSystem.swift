@@ -32,8 +32,16 @@ class Fight{
     }
     
     func attackEnemy(possibility: Int){
-        
+        let randomInt = Int.random(in: 1..<possibility)
+        print(randomInt) 
     }
     
+    func checkIfWon() -> Bool{
+        if enemy.life <= 0{
+            return true
+        }else{
+            return false
+        }
+    }
     
 }

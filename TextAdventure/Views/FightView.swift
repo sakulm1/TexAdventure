@@ -11,7 +11,11 @@ struct FightView: View {
     var image_Character: String = "wizard"
     var monster: Enemy
     var afterWin: Int
+    var HauptCharakter: MainCharacter
     @State var life: Int
+    
+    
+    
     var body: some View {
         VStack(alignment: .center){
             Spacer()
@@ -50,6 +54,9 @@ struct FightView: View {
                         .padding()
                         .background(Capsule().foregroundColor(.blue))
                         .foregroundColor(.white)
+                        .task {
+                            print("test")
+                        }
                     Text("Use")
                         .frame(width: 140)
                         .controlSize(.large)
@@ -64,6 +71,6 @@ struct FightView: View {
 
 struct FightView_Previews: PreviewProvider {
     static var previews: some View {
-        FightView(monster: getRandomEnemy(), afterWin: 4, life: 1)
+        FightView(monster: getRandomEnemy(), afterWin: 4, HauptCharakter: MainCharacter(life: 9, name: "", strenght: 3), life: 1)
     }
 }

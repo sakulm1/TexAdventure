@@ -14,7 +14,7 @@ struct StoryView: View {
     var body: some View {
         
 //        StoryPageView(story: story, pageIndex: 0, life: HauptCharakter.life)
-        GameView(story: story, pageIndex: 0, life: life)
+        GameView(story: story, pageIndex: 0, life: life, HauptCharakter: HauptCharakter)
         
     }
 }

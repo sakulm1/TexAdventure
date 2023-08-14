@@ -27,7 +27,8 @@ class Fight{
     }
     
     func attackCharacter(possibility: Int){
-        
+        let randomInt = Int.random(in: 1..<possibility)
+        print(randomInt)
     }
     
     func attackEnemy(possibility: Int){

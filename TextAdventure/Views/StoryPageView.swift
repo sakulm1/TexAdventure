@@ -15,6 +15,7 @@ struct StoryPageView: View {
     @State var life: Int
     @State private var tab = false
     @State private var time: Int = 5
+    var HauptCharakter: MainCharacter
     
     var body: some View {
         VStack{
@@ -61,7 +62,7 @@ struct StoryPageView: View {
             switch story.pages[pageIndex]{
             case .storyPage(let page):
                 ForEach(page.choices, id: \Choice.text){choice in
-                    NavigationLink(destination: GameView(story: story, pageIndex: choice.destination, life: life)){
+                    NavigationLink(destination: GameView(story: story, pageIndex: choice.destination, life: life, HauptCharakter: HauptCharakter)){
                         Text(choice.text)
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .padding()
@@ -107,6 +108,6 @@ struct StoryPageView: View {
 
 struct TextView_Previews: PreviewProvider {
     static var previews: some View {
-        StoryPageView(story: story, pageIndex: 0, life: 8)
+        StoryPageView(story: story, pageIndex: 0, life: 8, HauptCharakter: MainCharacter(life: 9, name: "", strenght: 19))
     }
 }

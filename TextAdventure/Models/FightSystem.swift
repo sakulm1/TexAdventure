@@ -37,12 +37,12 @@ class Fight {
     func characterDamage(_ reduceLife: Int) {
         mainCahracter.life -= reduceLife
     }
-    
+    //TODO: ändern der FUnktion um sie an die Herzen des Characters anzpassen
     /// Simulates an attack on the main character.
     ///
     /// - Parameter possibility: The upper limit for generating a random number.
     func attackCharacter(possibility: Int, weapon: Weapon) {
-        var randomInt = Int.random(in: 1..<possibility)
+        let randomInt = Int.random(in: 1..<possibility)
         let weaponDamage = (weapon.damage / 8) * randomInt
         characterDamage(weaponDamage)
     }
@@ -51,7 +51,7 @@ class Fight {
     ///
     /// - Parameter possibility: The upper limit for generating a random number.
     func attackEnemy(possibility: Int, weapon: Weapon) {
-        var randomInt = Int.random(in: 1..<possibility)
+        let randomInt = Int.random(in: 1..<possibility)
         let weaponDamage = (weapon.damage / 8) * randomInt
         enemyDamage(weaponDamage)
     }

@@ -14,6 +14,7 @@ struct FightView: View {
     var HauptCharakter: MainCharacter
     @State var life: Int
     @State var selectetWeapon = dolch
+    @State var enemyAlife = true
     var newFight: Fight
         
     init(monster: Enemy, afterWin: Int, HauptCharakter: MainCharacter, life: Int) {
@@ -23,16 +24,12 @@ struct FightView: View {
         self.life = life
         self.newFight = Fight(mainCahracter: HauptCharakter, enemy: monster)
     }
-    
-    
-    
+     
     var body: some View {
         VStack(alignment: .center){
             Spacer()
             VStack{
-                Image(monster.image)
-                    .scaleEffect(3)
-                HealthBar(life: monster.life)
+                getEnemyPic()
             }
             Spacer()
             VStack{
@@ -59,9 +56,7 @@ struct FightView: View {
                 }.padding()
                 HStack{
                     Button("Attack"){
-                        print(" vorher: \(newFight.getLifeEnemy())")
-                        newFight.attackEnemy(possibility: selectetWeapon.value / 3 , weapon: selectetWeapon)
-                        print("nacher: \(newFight.getLifeEnemy())")
+                        fight()
                     }
                         .frame(width: 140)
                         .controlSize(.large)
@@ -79,7 +74,36 @@ struct FightView: View {
             }
         }//.navigationBarBackButtonHidden(true)
     }
+    
+    func fight(){
+        
+        newFight.attackEnemy(possibility: selectetWeapon.value / 3 , weapon: selectetWeapon)
+    }
+    
+    func getEnemyPic() -> some View{
+        
+        if enemyAlife {
+            return AnyView{
+                VStack{
+                    Image(monster.image)
+                        .scaleEffect(3)
+                    HealthBar(life: monster.life)
+                }
+            }
+        }else{
+            return AnyView{
+                VStack{
+                    Image(monster.image)
+                        .scaleEffect(3)
+                    HealthBar(life: monster.life)
+                }
+            }
+        }
+    }
 }
+
+
+
 
 struct FightView_Previews: PreviewProvider {
     static var previews: some View {

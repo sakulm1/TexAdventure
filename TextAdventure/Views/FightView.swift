@@ -9,10 +9,20 @@ import SwiftUI
 
 struct FightView: View {
     var image_Character: String = "wizard"
-    var monster: Enemy
+    @State var monster: Enemy
     var afterWin: Int
     var HauptCharakter: MainCharacter
     @State var life: Int
+    @State var selectetWeapon = dolch
+    var newFight: Fight
+        
+    init(monster: Enemy, afterWin: Int, HauptCharakter: MainCharacter, life: Int) {
+        self.monster = monster
+        self.afterWin = afterWin
+        self.HauptCharakter = HauptCharakter
+        self.life = life
+        self.newFight = Fight(mainCahracter: HauptCharakter, enemy: monster)
+    }
     
     
     
@@ -22,7 +32,7 @@ struct FightView: View {
             VStack{
                 Image(monster.image)
                     .scaleEffect(3)
-                HealthBar(life: 5)
+                HealthBar(life: monster.life)
             }
             Spacer()
             VStack{
@@ -48,15 +58,17 @@ struct FightView: View {
                         .shadow(radius: 10)
                 }.padding()
                 HStack{
-                    Text("Attack")
+                    Button("Attack"){
+                        print(" vorher: \(newFight.getLifeEnemy())")
+                        newFight.attackEnemy(possibility: selectetWeapon.value / 3 , weapon: selectetWeapon)
+                        print("nacher: \(newFight.getLifeEnemy())")
+                    }
                         .frame(width: 140)
                         .controlSize(.large)
                         .padding()
                         .background(Capsule().foregroundColor(.blue))
                         .foregroundColor(.white)
-                        .task {
-                            print("test")
-                        }
+                    
                     Text("Use")
                         .frame(width: 140)
                         .controlSize(.large)
@@ -71,6 +83,6 @@ struct FightView: View {
 
 struct FightView_Previews: PreviewProvider {
     static var previews: some View {
-        FightView(monster: getRandomEnemy(), afterWin: 4, HauptCharakter: MainCharacter(life: 9, name: "", strenght: 3), life: 1)
+        FightView(monster: getRandomEnemy(), afterWin: 4, HauptCharakter: MainCharacter(life: 9, name: "", strenght: 3), life: 8)
     }
 }
